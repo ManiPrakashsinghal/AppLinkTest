@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirect to URL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; gap: 20px;">
+
+  <h2>Enter URL and Redirect</h2>
+
+  <input
+    type="text"
+    id="urlInput"
+    placeholder="Enter URL here"
+    style="width: 300px; padding: 10px; font-size: 16px;"
+  />
+
+  <button
+    onclick="redirectToUrl()"
+    style="padding: 10px 20px; font-size: 18px; background-color: #4CAF50; color: white; border: none; border-radius: 8px; cursor: pointer;"
+  >
+    Open Link
+  </button>
+
+  <script>
+    function redirectToUrl() {
+      const url = document.getElementById('urlInput').value.trim();
+      if (url) {
+        window.location.href = url;
+      } else {
+        alert('Please enter a valid URL.');
+      }
+    }
+  </script>
+
+</body>
+</html>
